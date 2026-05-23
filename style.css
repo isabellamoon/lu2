@@ -17,6 +17,7 @@ body {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
 
 h1 {
   font-size: calc(24px + 1.5vw);
@@ -31,6 +32,7 @@ h2 {
 @keyframes slideUp {
   from { transform: translateY(30px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
+}
 
 .main-layout-container {
   display: flex; 
@@ -58,10 +60,12 @@ h2 {
   align-items: center;
 }
 
+
 #status, .card-text {
   color: #002D21 !important;
   font-size: 16px;
   margin: 0 0 20px 0;
+}
 
 .button-group {
   display: flex;
