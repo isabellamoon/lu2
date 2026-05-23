@@ -1,55 +1,93 @@
-  body {
-  background-color: #fac2c2; 
-  color: #000000;            
-  text-align: center;      
-  padding: 60px;
-}
-#status, ul, li {
-  color: #002D21 !important; 
+body {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  text-align: center;
+  font-family: sans-serif;
 }
 
-ul {
-  list-style: none; 
-  padding: 0;
+#screen-home {
+  background: linear-gradient(135deg, #ffffff 0%, #f187ae 100%) !important;
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
-    h1 {
-      font-size: 48px;            
-    }
-    button {
-      background-color: #021a0f;  /
-      color: #ffffff;             
-      padding: 10px 30px;         
-      font-size: 18px;           
-      border: none;               
-      border-radius: 12px;       
-      margin: 10px;               
-    }
-.main-btn:hover {
-  background-color: #0e9271;
+
+h1 {
+  font-size: 44px;
+  margin-bottom: 10px;
 }
-.content-container {
-  display: flex;         
-  align-items: center;   
-  justify-content: center; 
-  gap: 40px;         
-  max-width: 900px;      
-  margin: 5px auto;    
-  padding: 20px;
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
 }
-.content-container {
-  display: flex;         
-  align-items: center;   
-  justify-content: center; 
-  gap: 50px;            
-  max-width: 1000px;
-  margin: 0 auto;
+
+#status {
+  color: #002D21 !important;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.mascot-container {
+  margin-bottom: 20px;
 }
 
 .mascot-img {
-  max-width: 400px;      
+  width: 250px;
   height: auto;
 }
 
-.text-box {
-  text-align: left;     
-  max-width: 450px;
+.main-layout-container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  gap: 25px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#kiosk-content {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 450px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+  box-sizing: border-box;
+}
+
+..side-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #021a0f;  
+  color: white;               
+  padding: 12px 25px;         
+  font-size: 18px;            
+  border: none;               
+  border-radius: 12px;        
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #00aaff;  
+  transform: translateY(-2px); 
+}
+
+.side-btn {
+  width: 120px; 
+  height: 50px;
+}
