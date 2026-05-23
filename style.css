@@ -43,83 +43,92 @@ h2 {
   to { transform: translateY(0); opacity: 1; }
 }
 
+/* 두 박스를 정렬하는 틀 */
 .main-layout-container {
   display: flex; 
   flex-direction: row;     
   justify-content: center; 
-  align-items: stretch;  
+  align-items: stretch;     
   gap: 25px;
-  max-width: 900px;
+  max-width: 950px;    
   margin: 0 auto;
   animation: slideUp 1s ease-out;
 }
 
-#kiosk-content, .side-menu {
-  background-color: rgba(255, 255, 255, 0.5) !important; 
-  padding: 30px 20px;
-  border-radius: 20px;     
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); 
-  backdrop-filter: blur(5px);
+/* ★ 무조건 나오는 흰색 투명 박스 핵심 설정 ★ */
+.card-box {
+  background-color: rgba(255, 255, 255, 0.6) !important; /* 투명도 0.6으로 박스 감도 up! */
+  padding: 45px 30px;        
+  border-radius: 25px;       
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.08); 
+  backdrop-filter: blur(8px) !important; /* 반투명 흐림 효과 강제 활성화 */
+  -webkit-backdrop-filter: blur(8px);    /* 아이폰/사파리 브라우저 지원 */
   box-sizing: border-box;
-  flex: 1;
-  min-width: 280px;
+  
+  flex: 1;                   
+  width: 100%;               
+  max-width: 450px;          
+  
   display: flex;
-  flex-direction: column; 
-  justify-content: center;
+  flex-direction: column;  
+  justify-content: space-between; 
   align-items: center;
 }
 
-#status, .card-text {
+.card-text {
   color: #002D21 !important;
-  font-size: 16px;
-  margin: 0 0 20px 0;
+  font-size: 16px;          
+  font-weight: bold;
+  margin: 0 0 35px 0;        
+  word-break: keep-all;     
 }
 
 .button-group {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
   width: 100%;
 }
 
+/* 알약 버튼 스타일 */
 button {
-  background-color: #021a0f;  
-  color: white;               
-  padding: 12px 20px;         
+  background-color: #0d2319 !important; 
+  color: white !important;               
+  padding: 14px 24px;         
   font-size: 16px;            
-  border: none;               
-  border-radius: 50px;   
+  font-weight: bold;
+  border: none !important;               
+  border-radius: 50px !important;       
   cursor: pointer;
-  flex: 1;           
-  max-width: 140px;
   
+  flex: 1;                   
+  max-width: 140px;
+  box-sizing: border-box;
   transition: all 0.3s ease; 
 }
 
-
 button:hover {
-  background-color: #00aaff; 
-  transform: translateY(-5px) scale(1.05); 
-  box-shadow: 0px 5px 15px rgba(0, 170, 255, 0.4);
+  background-color: #00aaff !important;  
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0px 6px 15px rgba(0, 170, 255, 0.35);
 }
 
-button:nth-child(2) {
-  opacity: 0.75;
-}
-button:nth-child(2):hover {
-  opacity: 1;
+/* 두 번째 보조 버튼 색상 (처음으로, 궁금해요) */
+.button-group button:nth-child(2) {
+  background-color: #3d4a41 !important; 
 }
 
 button:active {
   transform: translateY(-1px) scale(0.98);
 }
 
+/* 모바일 반응형 */
 @media (max-width: 768px) {
   .main-layout-container {
     flex-direction: column;
     align-items: center;
   }
-  #kiosk-content, .side-menu {
+  .card-box {
     width: 100%;
     max-width: 450px;
   }
