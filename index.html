@@ -1,37 +1,40 @@
-<!DOCTYPE html>          <!-- 이 파일이 HTML5라고 브라우저에게 알림 -->
-<html lang="ko">         <!-- 문서 전체를 감싸는 태그. lang은 언어 설정 -->
+<!DOCTYPE html>
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <title>말해U</title>
   <link rel="stylesheet" href="style.css">
-<body>                   <!-- 실제 화면에 보이는 내용 전부 여기 안에 -->
+</head>
+<body>
 
-  <h1>말해U 키오스크 입니다</h1>
+  <div id="screen-home">
 
+    <h1>말해U 키오스크 입니다</h1>
+    <h2>느려도 괜찮아요. 천천히 시작하세요. 기다려 드릴게요.</h2>
+
+    <div class="mascot-container">
+      <img src="말해유.png" alt="말해유" class="mascot-img">
+    </div>
+
+    <div class="main-layout-container">
+
+      <div id="kiosk-content">
+        <p id="status">음성으로 말씀하시면 바로 도와드립니다.</p>
+        <section id="actions">
+          <button class="main-btn" onclick="startListening()">시작하기</button>
+          <button class="main-btn" onclick="reset()">처음으로</button>
+        </section>
+      </div>
+<div id="kiosk-content">
+  <p>무엇이든 물어보세요.</p>
+      <section id="MENU" class="side-menu">
+        <button class="main-btn side-btn" onclick="openComplaintGuide()">말해U란</button> 
+        <button class="main-btn side-btn" onclick="openComplaintGuide()">궁금해요</button> 
+      </section>
+    </div>
+      
+
+    </div> </div> <script src="script.js"></script>
 </body>
 </html>
-
-<h2>느려도 괜찮아요. 천천히 시작하세요. 기다려 드릴게요.</h2>
-
-  <section id="header">
-<img src="말해유.png" alt="말해유" style="width: 30%;">
-
-<div id="kiosk-content" style="background-color: rgba(255, 255, 255, 0.432); color: white; max-width: 500px; margin: 25px auto; padding: 30px; border-radius: 20px; box-shadow: 0px 4px 15px rgba(0,0,0,0.2); text-align: center; backdrop-filter: blur(5px);">
-<p id="status">음성으로 말씀하시면 바로 도와드립니다.</p>
-   <section id="actions">
-  <button class="main-btn" onclick="startListening()">시작하기</button>
- <button class="main-btn" onclick="reset()">처음으로</button>
-</section>
-</div>
-
-  <section id="MENU">
-    <ul>
-      <li> 말해U란</li>
-      <li> 민원접수</li>
-    </ul>
-    <section id="actions">
-     <button class="main-btn" onclick="openComplaintGuide()">말해U란</button> 
-     <button class="main-btn" onclick="openComplaintGuide()">민원접수</button> 
-    </section>
-    <script src="script.js"></script>
 
