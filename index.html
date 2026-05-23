@@ -18,21 +18,21 @@
 
     <div class="main-layout-container">
 
-      <div id="kiosk-content">
-        <p id="status">음성으로 말씀하시면 바로 도와드립니다.</p>
+      <div id="kiosk-content" class="card-box">
+        <p id="status" class="card-text">음성으로 말씀하시면 바로 도와드립니다.</p>
         <div class="button-group">
           <button class="main-btn" onclick="startListening()">시작하기</button>
           <button class="main-btn" onclick="reset()">처음으로</button>
         </div>
       </div>
 
-      <section id="MENU" class="side-menu">
+      <div id="MENU" class="card-box">
         <p class="card-text">무엇이든 물어보세요.</p>
         <div class="button-group">
           <button class="main-btn" onclick="openComplaintGuide()">말해U란</button> 
-          <button class="main-btn" onclick="openComplaintGuide()">궁금해요</button> 
+          <button class="main-btn" onclick="openGuide2()">궁금해요</button> 
         </div>
-      </section>
+      </div>
 
     </div> </div> <script src="script.js"></script>
 </body>
